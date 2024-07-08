@@ -1,16 +1,112 @@
 .main {
   display: flex;
+  z-index: -1;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   padding: 6rem;
   min-height: 100vh;
   background-image: url("https://www.intract.io/assets/intract-academy-background-5547a705.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
+  position: relative;
 }
 
+.logo_description_container {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  mix-blend-mode: screen;
+  transition: top 0.8s ease;
+  animation: slideFromTop 1s ease forwards;
+}
+
+.logo_description_container img {
+  z-index: -1;
+  mix-blend-mode: screen;
+  width: 235px;
+  transition: top 0.5s ease;
+}
+
+.logo_description_container p,
+.logo_description_container span {
+  mix-blend-mode: plus-lighter;
+  color: var(--White-40, rgba(255, 255, 255, 0.4));
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.logo_description_container span {
+  color: var(--White-80, rgba(255, 255, 255, 0.8));
+}
+
+.logo_description_container button {
+  position: relative;
+  padding: 8px 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-wrap: nowrap;
+  min-width: max-content;
+  border-radius: 8px;
+  border: 1px solid var(--White-10, rgba(255, 255, 255, 0.1));
+  background: #6435e9;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.logo_description_container button span {
+  font-size: 14px;
+  color: var(--White-80, rgba(255, 255, 255, 0.8));
+}
+
+.logo_description_container button img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+@keyframes slideFromTop {
+  0% {
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    transform: translate(-50%, 15%);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .logo_description_container {
+    top: 10%;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .logo_description_container {
+    top: 5%;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo_description_container {
+    top: 0%;
+    width: 100%;
+    padding: 0 15px;
+    gap: 20px;
+  }
+}
 .description {
   display: inherit;
   justify-content: inherit;
@@ -60,7 +156,7 @@
 
 .card span {
   display: inline-block;
-  transition: transform 200ms;
+  /* transition: transform 200ms; */
   opacity: 0;
 }
 
