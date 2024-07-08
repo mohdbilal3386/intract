@@ -11,6 +11,7 @@
   backdrop-filter: blur(5px);
   background-color: #00000040;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 1;
 }
 
 .header_container {

@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./Academy.module.css";
 import Image from "next/image";
 import activepath from "@/public/activepath.svg";
+import Accordion from "../components/Accordion";
 
 const Academy = () => {
   return (
@@ -42,6 +43,7 @@ const Academy = () => {
       </div>
       <div>
         <Image src={activepath} alt={""} />
+        <Accordion />
       </div>
     </div>
   );

@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         pathname: "/assets/**",
       },
+      {
+        protocol: "https",
+        hostname: "static.highongrowth.xyz",
+        port: "",
+        // pathname: "/assets/**",
+      },
     ],
   },
 };

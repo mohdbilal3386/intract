@@ -1,6 +1,6 @@
 .main {
   display: flex;
-  z-index: -1;
+  /* z-index: -1; */
   flex-direction: column;
   justify-content: space-between;
   padding: 6rem;
@@ -86,6 +86,8 @@
     transform: translate(-50%, 15%);
   }
 }
+
+/* Breakpoints for diff screen  */
 @media screen and (max-width: 1200px) {
   .logo_description_container {
     top: 10%;
@@ -114,7 +116,7 @@
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
-  z-index: 2;
+  /* z-index: 2; */
   font-family: var(--font-mono);
 }
 
@@ -194,7 +196,7 @@
   background: var(--primary-glow);
   width: 240px;
   height: 180px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .center::before,
@@ -300,7 +302,7 @@
       transparent 0%,
       rgb(var(--background-end-rgb)) 40%
     );
-    z-index: 1;
+    /* z-index: 1; */
   }
 }
 
