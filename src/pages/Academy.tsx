@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./Academy.module.css";
 import Image from "next/image";
+import activepath from "@/public/activepath.svg";
 
 const Academy = () => {
   return (
@@ -39,7 +40,9 @@ const Academy = () => {
           </button>
         </div>
       </div>
-      {/* <div >cllslsllssll</div> */}
+      <div>
+        <Image src={activepath} alt={""} />
+      </div>
     </div>
   );
 };
